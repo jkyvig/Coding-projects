@@ -1,23 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Weather</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Github</title>
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.X-UA-Compatible/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/
-    iJTQUOhcWr7x9JvoRxT2MZw1T"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-  <body>
-    <h1>Hosting with <a href="https://www.netlify.com/">Netlify</a></h1>
-    <img src="https://i.ytimg.com/vi/jSpBdLG5C0Q/maxresdefault.jpg" alt="" />
 
-    <script src="script.js"></script>
+  <body>
+    <div class="container">
+      <div class="weather-detail">
+        <form class="city-form" id="city-form">
+          <div class="col-1">
+            <input type="text" id="city-input" placeholder="Type a City" />
+          </div>
+          <div class="search-one">
+            <input type="submit" value="Search" class="form-search" />
+          </div>
+          <div class="current-one">
+            <button class="button-current" id="current-location-button">
+              Current
+            </button>
+          </div>
+        </form>
+
+        <h1 id="city"></h1>
+        <br />
+        <div class="current">
+          <ul>
+            <li id="date"></li>
+            <li id="description"></li>
+            <span role="img">☁️</span>
+          </ul>
+        </div>
+        <br />
+        <div class="weather-temp">
+          <span class="temperature" id="temperature"></span
+          ><span class="units">°C</span>
+          <br />
+        </div>
+
+        <div class="more-weather">
+          <ul>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
